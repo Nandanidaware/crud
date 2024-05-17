@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse Sentence</title>
+</head>
+<body>
+  <div>
+    <input type="text" id="i" placeholder="Enter a sentence">
+    <button id="b">Reverse</button>
+  </div>
+  <div id="o"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let g = document.getElementById.bind(document);
+      let s = "value";
+      let r = "textContent";
+
+      let i = g("i");
+      let b = g("b");
+      let o = g("o");
+
+      b.addEventListener("click", function() {
+        let t = i[s].trim();
+        if (t) {
+          let w = t.split(" ");
+          let rw = w.reverse();
+          let rs = rw.join(" ");
+          o[r] = rs;
+        } else {
+          o[r] = "Please enter a sentence.";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
